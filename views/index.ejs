@@ -22,9 +22,9 @@
     /* IMAGEN PRINCIPAL (recortada desde arriba) */
     .hero-img {
       width: 100%;
-      height: 300px;         /* Ajusta si quieres ver más o menos parte superior */
-      object-fit: cover;     /* Mantiene proporción y recorta */
-      object-position: top;  /* 👈 Muestra SOLO la parte superior */
+      height: 300px;         
+      object-fit: cover;     
+      object-position: top;  
       margin-top: 20px;
       border-radius: 8px;
     }
@@ -38,6 +38,17 @@
       padding: 15px;
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Enlace del título de servicios */
+    .link-servicios {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .link-servicios:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -53,7 +64,11 @@
   </header>
 
   <section>
-    <h2>Servicios</h2>
+    <!-- Aquí convierto el título en enlace -->
+    <h2>
+      <a href="/servicios" class="link-servicios">Servicios</a>
+    </h2>
+
     <ul>
       <% services.forEach(function(service){ %>
         <li><%= service %></li>
@@ -63,4 +78,3 @@
 
 </body>
 </html>
-
