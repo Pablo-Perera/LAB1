@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <style>
+        body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
+        header {
+            background:#003366; color:white; padding:30px;
+            text-align:center;
+        }
+        .container {
+            padding:40px; max-width:600px; margin:0 auto;
+            background:white; border-radius:10px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.2);
+        }
+        label { font-weight:bold; display:block; margin-top:20px; }
+        input, select, textarea {
+            width:100%; padding:12px; margin-top:5px;
+            border:1px solid #ccc; border-radius:5px;
+        }
+        button {
+            margin-top:25px; padding:12px 18px;
+            background:#003366; color:white;
+            border:none; border-radius:5px; cursor:pointer;
+        }
+        button:hover { background:#002244; }
+        a { display:block; margin-top:25px; color:#003366; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1><%= title %></h1>
+</header>
+
+<div class="container">
+
+    <p><%= description %></p>
+
+    <form action="/mejoras" method="POST">
+
+        <label>Nombre</label>
+        <input type="text" name="nombre" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Selecciona el servicio deseado</label>
+        <select name="servicio" required>
+            <option value="">-- Selecciona un servicio --</option>
+            <option value="Desarrollo de Software">Desarrollo de Software</option>
+            <option value="Consultoría Tecnológica">Consultoría Tecnológica</option>
+            <option value="Transformación Digital">Transformación Digital</option>
+            <option value="Ciberseguridad">Ciberseguridad</option>
+        </select>
+
+        <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <a href="/">← Volver al inicio</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <style>
+        body { font-family: Arial; background:#f4f4f4; text-align:center; padding:40px; }
+        .card {
+            max-width:600px; margin:0 auto; background:white;
+            padding:30px; border-radius:10px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.2);
+        }
+        a { display:block; margin-top:20px; color:#003366; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>¡Solicitud enviada!</h1>
+
+    <p><strong>Nombre:</strong> <%= nombre %></p>
+    <p><strong>Email:</strong> <%= email %></p>
+    <p><strong>Servicio solicitado:</strong></p>
+    <p><%= servicio %></p>
+
+    <a href="/mejoras">← Enviar otra solicitud</a>
+    <a href="/">← Volver al inicio</a>
+</div>
+
+</body>
+</html>

@@ -13,23 +13,39 @@
 
     /* HEADER */
     header { 
+      position: relative;  /* Permite posicionar el botón dentro del header */
       background: #003366; 
       color: white; 
       padding: 30px; 
       text-align: center; 
     }
 
-    /* IMAGEN PRINCIPAL (recortada desde arriba) */
+    /* BOTÓN CONTÁCTANOS EN LA ESQUINA DERECHA */
+    .btn-contacto {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ffcc00;
+      color: black;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .btn-contacto:hover {
+      background: #e6b800;
+    }
+
     .hero-img {
       width: 100%;
-      height: 300px;         
-      object-fit: cover;     
-      object-position: top;  
+      height: 300px;
+      object-fit: cover;
+      object-position: top;
       margin-top: 20px;
       border-radius: 8px;
     }
 
-    /* SECCIÓN DE SERVICIOS */
     section { padding: 20px; }
     ul { list-style: none; padding: 0; }
     li {
@@ -40,11 +56,9 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    /* Enlace del título de servicios */
     .link-servicios {
       color: black;
       text-decoration: none;
-      cursor: pointer;
     }
 
     .link-servicios:hover {
@@ -56,15 +70,16 @@
 <body>
 
   <header>
+    <!-- BOTÓN EN ESQUINA SUPERIOR DERECHA -->
+    <a href="/mejoras" class="btn-contacto">¡Contáctanos!</a>
+
     <h1><%= title %></h1>
     <p><%= tagline %></p>
 
-    <!-- Imagen superior -->
     <img src="<%= imagePath %>" alt="Imagen empresarial" class="hero-img">
   </header>
 
   <section>
-    <!-- Aquí convierto el título en enlace -->
     <h2>
       <a href="/servicios" class="link-servicios">Servicios</a>
     </h2>
@@ -74,6 +89,7 @@
         <li><%= service %></li>
       <% }) %>
     </ul>
+
   </section>
 
 </body>
